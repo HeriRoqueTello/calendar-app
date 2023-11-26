@@ -8,7 +8,6 @@ export const FabAddNew = () => {
 
 
   const addNew = () => {
-
     setActiveEvent({
       title: '',
       notes: '',

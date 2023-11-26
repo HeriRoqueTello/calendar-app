@@ -32,8 +32,8 @@ export const CalendarModal = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const [formValues, setFormValues] = useState({
-    title: 'Heri',
-    notes: 'Roque',
+    title: '',
+    notes: '',
     start: new Date(),
     end: addHours(new Date(), 2),
   })
@@ -98,7 +98,7 @@ export const CalendarModal = () => {
       overlayClassName={`modal-fondo`}
       closeTimeoutMS={200}
     >
-      <h1> Nuevo evento </h1>
+      <h1> { activeEvent?.title === '' ? 'Nuevo Evento' : 'Evento' } </h1>
       <hr />
       <form onSubmit={addEvent} className="container">
 
